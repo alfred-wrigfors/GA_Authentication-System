@@ -13,7 +13,7 @@ from mfrc522 import SimpleMFRC5222
 # LEDs
 error_LED = LED(21)
 running_LED = LED(20)
-status_LED = ["ready"=> LED(6), "detected"=> LED(5), "read"=> LED(24), "allowed"=> LED(25)]
+status_LED = [LED(6), LED(5), LED(24), LED(25)]
 
 # Buttons
 exit_Butoon = Button(17)
