@@ -17,7 +17,8 @@ from classes.API import API_class
 # Read data from config.json
 with open('config.json') as json_file:
 	# API
-	API = API_class(json_file['device_id'], json_file['api_domain'], json_file['api_credentials']['username'], json_file['api_credentials']['password'])
+	json_data = json.load(json_file)
+	API = API_class(json_data['device_id'], json_data['api_domain'], json_data['username'], json_data['password'])
 
 # Declaration of hardware
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -59,7 +60,7 @@ while True:
 	finally:
 		pass
 
-	if API.authenticate(id, 3):
+	if API.authenticate(id):
 		access_allowed()
 
 	else:

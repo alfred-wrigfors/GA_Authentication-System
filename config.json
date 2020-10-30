@@ -1,9 +1,6 @@
 {
   "device_id": "",
   "api_domain": "",
-  "api_credentials":
-    [
-      "username": "",
-      "password": ""
-    ]
+  "username": "",
+  "password": ""
 }
